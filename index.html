@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header> <!--recuenden que si aplican sticky va o ocupar el espacio-->
+                            <!--si aplican fixed, tiene que sumar el witdh:100%, 
+                            y ademas no va a ocupar su espacio, va a "pisar" parte del main-->
+        <nav>
+            <a href="" class="logo">
+                <img src="img/logo.svg" alt="logo de ...">
+            </a>
+
+            <ul class="menu"><!--aca voy a aplicar flex-->
+                
+                <li> <!--va a afectar a los li-->
+                    <a href="#incio">Inicio</a> <!--aca no va a afectar-->
+                </li>
+                <li>
+                    <a href="#flex-wrap">flex-wrap</a>
+                </li>
+                <li>
+                    <a href="#flex-direction-row">row</a>
+                </li>
+                <li>
+                    <a href="#flex-direction-colum">colum</a>
+                </li>
+                <li>
+                    <a href="#flex-grow">flex-grow</a>
+                </li>
+                <li>
+                    <a href="#position">position</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="portada" id="incio">
+            <article>
+                <h1>After de:
+                    box model y flex</h1>
+                <!--dato extra propiedad
+            para evitar br.. white-space: pre-line-->
+                    <!--aca como les comente pueden sumar un subtitulo y botones-->
+            </article>
+        </section>
+        <section class="flex inicio">
+            <div>
+                <img src="img/img-ejemplo-rosa.jpg" alt="">
+            </div>
+            <article>
+                <h2>Les damos la bienvenida al after de flex</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut consequuntur reiciendis quaerat
+                    accusantium, sint maxime nobis laudantium est blanditiis voluptatem vero necessitatibus tenetur
+                    assumenda eum aliquam beatae. Asperiores, culpa beatae?</p>
+            </article>
+        </section>
+
+        <!---FLEX---->
+        <!--flex wrap-->
+        <section id="flex-wrap">
+            <h2>Flex wrap</h2>
+
+            <article class=" flex ejemplo-wrap"> <!--aca aplico flex-->
+                <div>
+                    <img src="img/img-ejemplo.jpg" alt=""> <!--no tener como hijo directo a una imgen, porque se "aplasta"-->
+                    <h4>Lorem ipsum</h4>
+                    <p> dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+
+                <div class="flex colum">
+
+                    <div> <!--coloco este div porque no puede tener como hijo directo a una imgen, porque se "aplasta"-->
+                        <img src="img/img-ejemplo.jpg" alt=""> 
+                    </div>
+
+                    
+                    <h4>Lorem ipsum</h4>
+                    <p> dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="" class="boton">link</a>
+                </div>
+
+                <div>
+                    <img src="img/img-ejemplo.jpg" alt="">
+                    <h4>Lorem ipsum</h4>
+                    <p> dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div>
+                    <img src="img/img-ejemplo.jpg" alt="">
+                    <h4>Lorem ipsum</h4>
+                    <p> dolor sit amet consectetur adipisicing elit.</p>
+
+                </div>
+                <div>
+                    <img src="img/img-ejemplo.jpg" alt="">
+                    <h4>Lorem ipsum</h4>
+                    <p> dolor sit amet consectetur adipisicing elit.</p>
+
+                </div>
+                <div>
+                    <img src="img/img-ejemplo.jpg" alt="">
+                    <h4>Lorem ipsum</h4>
+                    <p> dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </article>
+        </section>
+
+        <!--Flex direction--->
+        <!--row-->
+        <section id="flex-direction-row">
+            <h2>Flex-direction: row</h2>
+            <h3>Justify</h3>
+            <article class="flex ejemplo-justify row">
+                <div><img src="img/img-ejemplo.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo.jpg" alt=""></div>
+            </article>
+            <h3>Aling</h3>
+            <article class="flex ejemplo-aling row">
+                <div><img src="img/img-ejemplo-rosa.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo-rosa.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo-rosa.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo-rosa.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo-rosa.jpg" alt=""></div>
+            </article>
+        </section>
+        <!--colum-->
+        <section id="flex-direction-colum">
+            <h2>Flex-direction: colum</h2>
+            <article class="flex ejemplo-justify colum">
+                <div><img src="img/img-ejemplo.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo.jpg" alt=""></div>
+            </article>
+            <h3>Aling</h3>
+            <article class="flex ejemplo-aling colum">
+                <div><img src="img/img-ejemplo-rosa.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo-rosa.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo-rosa.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo-rosa.jpg" alt=""></div>
+                <div><img src="img/img-ejemplo-rosa.jpg" alt=""></div>
+            </article>
+        </section>
+        <!--grow-->
+        <section id="flex-grow">
+            <h2>Flex grow</h2>
+            <article class="flex flex-grow">
+                <div><img src="img/img-ejemplo.jpg" alt="" srcset=""></div>
+                <div><img src="img/img-ejemplo.jpg" alt="" srcset=""></div>
+                <div class="grande"><img src="img/img-ejemplo-rosa.jpg" alt="" srcset=""></div>
+                <div><img src="img/img-ejemplo.jpg" alt="" srcset=""></div>
+                <div><img src="img/img-ejemplo.jpg" alt="" srcset=""></div>
+                <div><img src="img/img-ejemplo.jpg" alt="" srcset=""></div>
+            </article>
+        </section>
+
+
+        <!---POSTIONS---->
+        <section id="position">
+            <h2>Position</h2>
+            <article class="">
+                <h3>Stiky</h3> 
+                <div>
+
+                    <img src="img/sticky.jpg" alt="" class="sticky"> <!--solo se va a mover hasta que termine 
+                                                                        el espacio que ocupe el div que tiene 
+                                                                        como padre-->
+                    <img src="img/img-ejemplo.jpg" alt="">
+                    <img src="img/img-ejemplo.jpg" alt="">
+                    <img src="img/img-ejemplo.jpg" alt="">
+                    <img src="img/img-ejemplo.jpg" alt="">
+                    <img src="img/img-ejemplo.jpg" alt="">
+                    <img src="img/img-ejemplo.jpg" alt="">
+                    <img src="img/img-ejemplo.jpg" alt="">
+                </div>
+            </article>
+            <article>
+                <h3>Relative absulute</h3>
+                <div class="relative"> <!--este contenedor tiene reltavie, este es padre del que tiene absolte-->
+                    
+                    <img src="img/Absolute.jpg" alt="" class="absolute"> <!--este tiene absolute-->
+
+                </div>
+
+            </article>
+            <div class="logo fixed"> <!--se mueve en toda la pantellas-->
+                <img src="img/fixed.svg" alt="">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo">
+            <a href=""><img src="img/logo.svg" alt=""></a>
+        </div>
+
+        <ul><!--aca voy a aplicar flex-->
+                
+            <li> <!--va a afectar a los li-->
+                <a href="#incio">Inicio</a> <!--aca no va a afectar-->
+            </li>
+            <li>
+                <a href="#flex-wrap">flex-wrap</a>
+            </li>
+            <li>
+                <a href="#flex-direction-row">row</a>
+            </li>
+            <li>
+                <a href="#flex-direction-colum">colum</a>
+            </li>
+            <li>
+                <a href="#flex-grow">flex-grow</a>
+            </li>
+            <li>
+                <a href="#position">position</a>
+            </li>
+        </ul>
+
+        <ul class="redes">
+            <li><a href=""> <img src="img/facebook.png" alt=""></a></li>
+            <li><a href=""> <img src="img/youtube.png" alt=""></a></li>
+            <li><a href=""> <img src="img/linkedin.png" alt=""></a></li>
+            <li><a href=""> <img src="img/instagram.png" alt=""></a></li>
+        </ul>
+
+    </footer>
+</body>
+
+</html>

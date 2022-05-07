@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+img{
+    max-width: 100%;
+}
+
+section{
+    padding: 2em;
+}
+
+h1 ,h2 ,h3 ,h4 ,p {
+    text-align: center;
+    margin:1em ;
+}
+
+.boton{
+    background-color: bisque;
+    border-radius: 1em;
+    padding: 0.5em;
+    width: 50%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+/*------------HEADER Y FOOTER--------------*/
+
+header, footer{
+    background-color: blanchedalmond;
+    padding: 10px;
+}
+/*HEADER*/
+header{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    }
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+.menu li{
+    padding: 10px;
+    margin: 20px;
+}
+
+.logo{
+    width: 50px;
+    
+}
+
+
+/*FOOTER*/
+footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+footer li{
+    margin: 10px;
+}
+.redes li{
+    width: 30px;
+}
+
+/*------------PORTADA--------------*/
+.portada{
+    height: 80vh;
+    background-image:url("../img/fondo.jpg");
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*inicio*/
+.inicio{
+    justify-content: space-evenly;
+}
+.inicio div, .inicio article{
+    width: 45%;
+}
+
+h1{
+    font-size: 2.5em;
+    text-transform: uppercase;
+    /*Propiedad para separar textos sin br*/
+    white-space: pre-line;
+}
+h2{
+        font-size: 2em;
+}
+
+/*----SECCION CON FLEX WRAP-------*/
+.flex{
+    display: flex;
+}
+.ejemplo-wrap{
+    /*recuenden que estas clases funcionan si declare flex antes*/
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ejemplo-wrap>div{
+    margin: 1em;
+    /* para que funcione border tiene que declarar todas
+            ancho estilo color
+    border: 1px solid #E4DCDC;*/
+    padding: 2em;
+    width: 30%;
+    border-radius: 2%;
+    /*costado alto desenfoque color*/
+    box-shadow: 5px 10px 5px rgba(199, 198, 198, 0.18);
+}
+/*----SECCION CON FLEX GROW------*/
+
+/*esto va como extra, pruebenlo*/
+.flex-grow div{
+    width: 10%;
+    flex-grow: 1;
+    margin: 0.5em;
+}
+.flex-grow .grande{
+    flex-grow: 3; /*este va a quedar más ancho, pero si revisan las imagenes que yo aplique tienen todas el mismo tamaño*/
+}
+
+/*---SECCION CON FLEX DIRECTION------*/
+.ejemplo-justify div, .ejemplo-aling div{
+width: 10%;
+margin: 10px;
+}
+
+.row{
+    flex-direction: row;
+}
+.ejemplo-aling.row{
+    height: 50vh;
+}
+.colum{
+    flex-direction: column;
+}
+.ejemplo-justify.colum{
+    background-color: blanchedalmond;
+    height: 100vh;
+}
+.ejemplo-justify.colum img{
+    height: 50px;
+}
+.ejemplo-justify{
+    justify-content: center;
+}
+.ejemplo-aling{
+    align-items: center;
+}
+
+
+/*---POSITION STICKY----*/
+/*se mueve dentro del contenedor padre*/
+.sticky{
+    position: sticky;
+    top: 1em;
+    left: 1em;
+}
+
+
+/*---POSITION RELATIVE ABSOLUTE----*/
+.relative{
+    margin: 0 auto;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    width: 50vh;
+    height: 50vh;
+    background-image: url('../img/Relative.jpg');
+}
+
+.absolute{
+    position: absolute;
+    bottom: 1em;
+    left: 2em;
+}
+
+
+/*--------------FIXED-----------------*/
+/*se mueve por toda la pantalla*/
+.fixed{
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+}
+
+
+/*------FLEX EN EL ARCHIVO DE FLEX-BODY*/
+.flex-body{ /*esta clase se la aplique al body*/
+    /*si les paso que tienen un archivo donde el contendio no llega a ocupar toda la pantalla, pueden aplicar esto
+    miren el archivo incompleto para que quede más claro*/
+    display: flex;
+    flex-direction: column; /*para que todo qquede vertical, y no uno al lado del otro*/
+    justify-content: space-between;
+    /*como vimos con el flex-direction colum, justify funciona vertical*/
+    height: 100vh; /*para que ocupe toda la pantalla*/
+    
+}
